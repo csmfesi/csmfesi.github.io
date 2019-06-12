@@ -199,7 +199,7 @@
 
         <!-- PAGE CONTAINER-->
         <div class="page-container">
-            <!-- HEADER DESKTOP-->
+            <!-- HEADER DESKTOP--><!--
             <header class="header-desktop">
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
@@ -215,7 +215,7 @@
                         </div>
                     </div>
                 </div>
-            </header>
+            </header>-->
             <!-- HEADER DESKTOP-->
 
             <!-- MAIN CONTENT-->
@@ -223,67 +223,99 @@
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-lg-12">
-                                <div class="au-card chart-percent-card">
-                                    <div class="au-card-inner">
-                                        <h3 class="title-2 tm-b-5">Reactivos - Modulos</h3>
-                                        
-                                        <p style="margin-top: 15px;font-size: .9em">Seleccione el modulo para el cual quiere observar los ejercicios disponibles con los que se cuenta</p>
-                                        <div class="row no-gutters">
-                                            <div class="col-xl-6">
-                                                <div class="chart-note-wrap">
-                                                    <div class="chart-note mr-0 d-block">
-                                                        <span class="dot dot--blue"></span>
-                                                        <span><a href="nervioso.html" style="color:#666">S.Nervioso</a></span>
-                                                    </div>
-                                                    <div class="chart-note mr-0 d-block">
-                                                        <span class="dot dot--red"></span>
-                                                        <span><a href="endocrino.html" style="color:#666">S.Endocrino</a></span>
-                                                    </div>
-                                                    <div class="chart-note mr-0 d-block">
-                                                        <span class="dot dot--blue"></span>
-                                                        <span>S.Osteomioarticular</span>
-                                                    </div>
-                                                    <div class="chart-note mr-0 d-block">
-                                                        <span class="dot dot--red"></span>
-                                                        <span>S.Inmunologico</span>
-                                                    </div>
-                                                    <div class="chart-note mr-0 d-block">
-                                                        <span class="dot dot--blue"></span>
-                                                        <span>S.Digestivo</span>
-                                                    </div>
-                                                    <div class="chart-note mr-0 d-block">
-                                                        <span class="dot dot--red"></span>
-                                                        <span>S.Urinario</span>
-                                                    </div>
-                                                    <div class="chart-note mr-0 d-block">
-                                                        <span class="dot dot--blue"></span>
-                                                        <span>S.Reproductor</span>
-                                                    </div>
-                                                    <div class="chart-note mr-0 d-block">
-                                                        <span class="dot dot--red"></span>
-                                                        <span>S.Cardiovascular</span>
-                                                    </div>
-                                                    <div class="chart-note mr-0 d-block">
-                                                        <span class="dot dot--blue"></span>
-                                                        <span>S.Respiratorio</span>
-                                                    </div>
-                                                    <div class="chart-note mr-0 d-block">
-                                                        <span class="dot dot--red"></span>
-                                                        <span>S.Tegumentario</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                           
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <i class="mr-2 fa fa-align-justify"></i>
+                                        <strong class="card-title" v-if="headerText">
+                                            <span class="num_reactivos"></span>-R /    
+                                            Generalidades - Sistema Endocrino
+                                        </strong>
+                                    </div>
+                                    <div class="card-body">
+                                      <div class="preguntas">                                      
+                                          <div class="pregunta actual"> 
+                                              <p class="pregunta_texto">
+                                                <strong>¿Cuál de estas afirmaciones acerca de las hormonas liberadoras hipotalámicas es verdadera?</strong></p>
+                                              <p class="inciso" > a) Se secretan hacia capilares en la eminencia media. </p>
+                                              <p class="inciso" > b) Se transportan mediante venas porta hacia la parte anterior de la hipófisis</p>
+                                              <p class="inciso" > c) Estimulan la secreción de hormonas específicas desde la parte anterior de la hipófisis.</p>
+                                              <p class="inciso " data="este"> d) Todas las anteriores son verdaderas</p>
+                                          </div>
+                                          <div class="pregunta" style="display:none"> 
+                                              <p class="pregunta_texto"><strong> La hormona que se encarga principalmente de ajustar el índice metabólico basal y de promover la maduración del encéfalo es</strong></p>
+                                              <p class="inciso" > a) Cortisol</p>
+                                              <p class="inciso" > b) ATCH </p>
+                                              <p class="inciso" > c) TSH</p>
+                                              <p class="inciso" data="este"> d) Tiroxina</p>
+                                          </div>      
+
+                                          <div class="pregunta" style="display:none"> 
+                                              <p class="pregunta_texto"><strong>¿Cuál de estas afirmaciones acerca de la corteza suprarrenal es verdadera?</strong></p>
+                                              <p class="inciso" > a) No está inervada por fibras nerviosas</p>
+                                              <p class="inciso" > b) Secreta algunos andrógenos</p>
+                                              <p class="inciso" > c) La zona glomerulosa secreta aldosterona</p>
+                                              <p class="inciso" > d) La zona fasciculada es estimulada por ACTH</p>
+                                              <p class="inciso" data="este"> e) Todas las anteriores son verdaderas</p>
+                                          </div>
+                                          
+                                          <div class="pregunta" style="display:none"> 
+                                              <p class="pregunta_texto"><strong>Las hormonas esteroides son secretadas por</strong></p>
+                                              <p class="inciso" > a) la corteza suprarrenal</p>
+                                              <p class="inciso" > b) las gónadas</p>
+                                              <p class="inciso" > c) la tiroides</p>
+                                              <p class="inciso" data="este"> d) tanto a como b</p>
+                                              <p class="inciso" > e) tanto b como c</p>
+                                          </div>
+
+                                        <div class="pregunta" style="display:none"> 
+                                              <p class="pregunta_texto"><strong>¿La secreción de cuál de estas hormonas estaría aumentada en una persona con bocio endémico?</strong></p>
+                                              <p class="inciso" data="este"> a) TSH</p>
+                                              <p class="inciso" > b) Tiroxina</p>
+                                              <p class="inciso" > c) Triyodotironina.</p>
+                                              <p class="inciso" > d) Todas las anteriores</p>
                                         </div>
+
+                                        <div class="pregunta" style="display:none"> 
+                                              <p class="pregunta_texto"><strong>¿Cuál de estas hormonas emplea cAMP como un segundo mensajero?</strong></p>
+                                              <p class="inciso" > a) Testosterona</p>
+                                              <p class="inciso" > b) Cortisol</p>
+                                              <p class="inciso" > c) Insulina</p>
+                                              <p class="inciso" data="este"> d) Adrenalina</p>
+                                        </div>
+
+
+
+                                        <div class="pregunta"  data="ultima" style="display:none"> 
+                                              <p class="pregunta_texto"><strong>¿Cuál de estas afirmaciones acerca de la hormona insulina es verdadera? </strong></p>
+                                              <p class="inciso" > a) Es secretada por las células α en los islotes de Langerhans</p>
+                                              <p class="inciso" > b) Se secreta en respuesta a un incremento de la glucosa en sangre</p>
+                                              <p class="inciso"> c) Estimula la producción de glucógeno y grasa</p>
+                                              <p class="inciso"> d) Tanto a como b son verdaderas</p>
+                                              <p class="inciso" data="este"> e) Tanto b como c son verdaderas</p>                          
+                                          </div>                                          
+                                          <input type="hidden" class="contador" value="0">
+                                          <input type="hidden" class="controlador" value="0">
+                                      </div>
+                                      <div>
+                                          <div class="mensaje">
+                                          </div>
+                                      </div>
+
                                     </div>
                                 </div>
+
+
+
+
+
+
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="copyright">
-                                    <p>Copyright © 2018 Colorlib. All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
+                                    <p>Copyright © 2019 Medipracticas. <a href="https://colorlib.com"> Comite Social de Medicina</a>.</p>
                                 </div>
                             </div>
                         </div>
@@ -319,6 +351,55 @@
 
     <!-- Main JS-->
     <script src="js/main.js"></script>
+    <script>    
+        $(document).on("click",".inciso",function(){
+            var opcion = $(this).attr("data")
+            var contador = parseInt($(".contador").val())
+            var controlador = parseInt($(".controlador").val())
+            if (controlador == 0) {
+                $(".controlador").val(1)
+                if (opcion == "este") {
+                    var nuevo_valor = parseInt(contador + 1)
+                    $(".contador").val(nuevo_valor)
+                    $(this).addClass("correcto")
+                    $(".mensaje").html('<div class="alert alert-info" role="alert" style="margin-top:12px"><i class="fa fa-check"></i> Respuesta correcta <a href="#" class="siguiente"> - Siguiente</a></div>');
+                }
+                else{
+                    $(this).addClass("incorrecto")
+                    $(".mensaje").html('<div class="alert alert-danger" role="alert" style="margin-top:12px"><i class="fa fa-times"></i> Respuesta incorrecta <a href="#" class="siguiente"> - Siguiente</a></li> </ul></div>');
+                }   
+            }
+            else{
+            }
+            
+            
+        })
+        $(document).on("click",".siguiente",function(){
+                var control_pregunta = $(".actual").attr("data")
+                $(".controlador").val(0)
+                if (control_pregunta == "ultima") {
+                    var contador = parseInt($(".contador").val())
+                    var num_reactivos = $(".preguntas .pregunta").length
+                    var texto_regresar = $(".texto_regresar").val()
+                    var ruta_regresar = $(".ruta_regresar").val()
+
+                    $(".mensaje").html("")
+                    $(".actual").html('Reactivos del cuestionario <strong>'+num_reactivos+'</strong> <br> Numero de aciertos <strong>'+contador+'</strong><br><br> <a href="endocrino.html"> Regresar a reactivos Sistema Endocrino</a><br><a href="index.html" style="margin-top:4px"> Ir a Panel Principal&nbsp;&nbsp;</a><br>') 
+                }   
+                else{
+                    $(".actual").hide()
+                    var siguiente_pregunta = $(".actual").next().show()
+                    $(".actual").removeClass("actual")
+                    siguiente_pregunta.addClass("actual")
+                    $(".mensaje").html("")      
+                }
+        })
+
+        $(document).ready(function(){
+            var num_reactivos = $(".preguntas .pregunta").length
+            $(".num_reactivos").html(num_reactivos)
+        })
+    </script>
 
 </body>
 
