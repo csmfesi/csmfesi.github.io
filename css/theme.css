@@ -14639,7 +14639,7 @@ section {
 .vue-lists ul, .vue-lists ol {
     padding-left: 30px;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     .header-desktop{
         display:none;
     }
