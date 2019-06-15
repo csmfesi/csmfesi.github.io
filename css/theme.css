@@ -14639,3 +14639,11 @@ section {
 .vue-lists ul, .vue-lists ol {
     padding-left: 30px;
 }
+@media screen and (max-width: 600px) {
+    .header-desktop{
+        display:none;
+    }
+}
+.pregunta_texto{
+    margin-bottom:5px;
+}
