@@ -39,7 +39,7 @@
                                     <img class="card-img-top" src="img/portad.jpg" alt="Card image cap">
                                     <div class="card-body">
                                         <h4 class="card-title mb-3">Medipracticas</h4>
-                                        <p class="card-text">Un proyecto que nace con la finalidad de crear un espacio en linea para la preparacion en nuestros estudios de los primeros años como futuros medicos
+                                        <!--<p class="card-text">Un proyecto que nace con la finalidad de crear un espacio en linea para la preparacion en nuestros estudios de los primeros años como futuros medicos-->
                                         </p>
                                     </div>
                                 </div>
