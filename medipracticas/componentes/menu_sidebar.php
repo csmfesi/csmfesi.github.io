@@ -9,12 +9,12 @@
                 
 
                 <li>
-                    <a class="js-arrow" href="<?php  echo $salto; ?>index.html">
+                    <a class="js-arrow" href="">
                         <i class="fas fa-tachometer-alt"></i>Indice
                     </a>                          
                 </li>
                 <li>
-                    <a href="<?php  echo $salto; ?>cuestionarios.html">
+                    <a href="">
                         <i class="fas fa-list"></i>Cuestionarios</a>
                 </li>
                 <li>
