@@ -5,7 +5,7 @@
 	$cuestionario = $array['cuestionario'];
 
 	$modulo = consulta_txt("SELECT modulo FROM modulos WHERE id_modulo = '$id_modulo'","modulo");
-	$link = amigables($cuestionario).".html";
+	$link = "../".amigables($modulo)."/";
 ?>
 
 <input type="hidden" class="modulo_return" value="<?php echo $modulo ?>">

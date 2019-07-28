@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <?php include("funciones.php"); ?>
@@ -61,7 +61,7 @@
                                             </div>
                                             <div class="au-task-list js-scrollbar3">
                                                 <?php  
-                                                    $consulta = mysqli_query($q_sec, "SELECT * FROM cuestionarios ORDER BY id_cuestionario desc LIMIT 0");
+                                                    $consulta = mysqli_query($q_sec, "SELECT * FROM cuestionarios ORDER BY id_cuestionario desc LIMIT 4");
                                                     $contador = 1;
                                                     while ($array = mysqli_fetch_array($consulta)) {
                                                         $id_modulo = $array['id_modulo'];
@@ -102,20 +102,24 @@
                                 <div class="overview-item overview-item--c1">
                                     <div class="overview__inner">
                                         <div class="overview-box clearfix">
-                                            
+                                            <?php 
+                                                $num = consulta_val("SELECT null FROM modulos");
+                                            ?>
                                             <div class="text">
-                                                <h2><i class="fa fa-book"></i>  10 Modulos</h2>
-                                                <span><a href="" style="color:white">Sistema Nervioso</a></span><br>
-                                                <span><a href="" style="color:white">Sistema Endocrino</a></span><br>
-                                                <span><a href="" style="color:white">Sistema O.M.A</a></span><br>
-                                                <span><a href="" style="color:white">Sistema Cardiovascular</a></span><br>
-                                                <span><a href="" style="color:white">Sistema Respiratorio</a></span><br>
-                                                <span><a href="" style="color:white">Sistema Hematologico</a></span><br>
-                                                <span><a href="" style="color:white">Sistema Digestivo</a></span><br>
-                                                <span><a href="" style="color:white">Sistema Reproductor</a></span><br>
-                                                <span><a href="" style="color:white">Sistema Urinario</a></span><br>
-                                                <span><a href="" style="color:white">Sistema Tegumentario</a></span><br>
-                                                <span><a href="" style="color:white">Sistema Inmunologico</a></span><br><br>
+                                                <h2><i class="fa fa-book"></i>  <?php echo $num ?> Modulos</h2>
+                                                <?php 
+                                                    $consulta_modulos = mysqli_query($q_sec,"SELECT * FROM modulos order by id_modulo asc");
+                                                    while ($array = mysqli_fetch_array($consulta_modulos)) {
+                                                        $modulo = $array['modulo'];
+                                                        $direccion = amigables($modulo)."/";
+                                                        ?>
+                                                            <span>
+                                                                <a href="<?php echo $direccion ?>" style="color:white"><?php echo $modulo ?></a>
+                                                            </span><br>
+                                                        <?php
+                                                    }
+                                                ?>
+                                                <br>
                                             </div>
                                         </div>
                                     </div>
@@ -138,8 +142,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="copyright">
-                                    <p>Copyright © 2019 Medipracticas. <a href="csmfesi.github.io"> Comite Social de Medicina</a>.</p>
-                                    <br>
+                                    <?php include("componentes/copyright.php"); ?>
                                 </div>
                             </div>
                         </div>

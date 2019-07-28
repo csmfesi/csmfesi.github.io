@@ -3,8 +3,8 @@
 <html lang="en">
 
 <head>
-    <?php include("funciones.php"); ?>
-    <?php include("componentes/head.php"); ?>
+    <?php include("../funciones.php"); ?>
+    <?php include("../componentes/head.php"); ?>
     <style>
         .inciso{
             cursor: default;
@@ -20,13 +20,13 @@
     <div class="page-wrapper">
         <!-- HEADER MOBILE-->
         <header class="header-mobile d-block d-lg-none">
-            <?php include("componentes/header_movil.php"); ?>
+            <?php include("../componentes/header_movil.php"); ?>
         </header>
         <!-- END HEADER MOBILE-->
 
         <!-- MENU SIDEBAR-->
         <aside class="menu-sidebar d-none d-lg-block">
-            <?php include("componentes/menu_sidebar.php"); ?>
+            <?php include("../componentes/menu_sidebar.php"); ?>
         </aside>
         <!-- END MENU SIDEBAR-->
 
@@ -34,7 +34,7 @@
         <div class="page-container">
             <!-- HEADER DESKTOP-->
             <header class="header-desktop">
-                <?php include("componentes/header_desktop.php"); ?>
+                <?php include("../componentes/header_desktop.php"); ?>
             </header>
             <!-- HEADER DESKTOP-->
 
@@ -43,12 +43,12 @@
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
                         <div class="row">
-                            <?php include("formato.php"); ?>
+                            <?php include("../formato.php"); ?>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="copyright">
-                                    <?php include("componentes/copyright.php"); ?>
+                                    <?php include("../componentes/copyright.php"); ?>
                                 </div>
                             </div>
                         </div>
@@ -61,7 +61,7 @@
 
     </div>
 
-    <?php include("componentes/footer.php"); ?>
+    <?php include("../componentes/footer.php"); ?>
 
     <script>    
         $(document).ready(function(){
@@ -107,7 +107,8 @@
             }
         })
 
-        $(document).on("click",".siguiente",function(){
+        $(document).on("click",".siguiente",function(e){
+                e.preventDefault()
                 var reactivo = parseInt($(".reactivo").val())
                 var suma_reactivo = reactivo + 1;
                 $(".reactivo").val(suma_reactivo)
@@ -125,7 +126,7 @@
                     var link_return = $(".link_return").val()
 
                     $(".mensaje").html("")
-                    $(".actual").html('Reactivos del cuestionario <strong>'+num_reactivos+'</strong> <br> Numero de aciertos <strong>'+contador+'</strong><br><br> <a href="'+link_return+'"> Regresar a reactivos '+modulo_return+'</a><br><a href="index.html" style="margin-top:4px"> Ir a Panel Principal&nbsp;&nbsp;</a><br>') 
+                    $(".actual").html('Reactivos del cuestionario <strong>'+num_reactivos+'</strong> <br> Numero de aciertos <strong>'+contador+'</strong><br><br> <a href="'+link_return+'"> Regresar a reactivos '+modulo_return+'</a><br><a href="" style="margin-top:4px"> Contestar de nuevol&nbsp;&nbsp;</a><br>') 
                 }   
                 else{
                     $(".actual").hide()
