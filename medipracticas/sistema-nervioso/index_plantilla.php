@@ -63,8 +63,7 @@
                                                                 }
                                                                 $otro_control = 'yes';
                                                                 ?>
-                                                                <div class="chart-note mr-0 d-block">
-                                                                    <span class="dot <?php echo $color ?>"></span>
+                                                                <div class="mr-0 d-block">
                                                                     <span>
                                                                         <a href="<?php echo $direccion ?>" style="color:#666">
                                                                             <?php echo $cuestionario ?>
