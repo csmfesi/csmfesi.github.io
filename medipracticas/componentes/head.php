@@ -6,7 +6,16 @@
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>Medipracticas</title>
+    <title>
+        <?php 
+            if ($titulo != '' ) {
+                echo "$titulo";
+            } 
+            else{
+                echo "Medipracticas";
+            }
+        ?>        
+    </title>
 
     <!-- Fontfaces CSS-->
     <link href="<?php  echo $salto; ?>css/font-face.css" rel="stylesheet" media="all">

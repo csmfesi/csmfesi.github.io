@@ -1,9 +1,21 @@
 <?php $salto = "../" ?>
 <!DOCTYPE html>
 <html lang="es">
+<?php include("../funciones.php"); ?>
+<?php  
+    $id_cuestionario = $_GET['id_cuestionario'];
+    $array = consulta_array("SELECT * FROM cuestionarios WHERE id_cuestionario = '$id_cuestionario'");
+    $id_modulo = $array['id_modulo'];
+    $cuestionario = $array['cuestionario'];
+
+    $modulo = consulta_txt("SELECT modulo FROM modulos WHERE id_modulo = '$id_modulo'","modulo");
+    $link = "../".amigables($modulo)."/";
+
+    $titulo = $cuestionario;
+?>
 
 <head>
-    <?php include("../funciones.php"); ?>
+    
     <?php include("../componentes/head.php"); ?>
     <style>
         .inciso{
@@ -67,9 +79,7 @@
         $(document).ready(function(){
             var reactivo = $(".reactivo").val()
             $(".numerito").html(reactivo+" - ") 
-            var titulo = $(".titulo").val()
-            $("title").html(titulo)
-            $(".titulo_h").html(titulo)
+           
 
         })
 

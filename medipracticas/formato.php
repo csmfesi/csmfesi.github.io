@@ -1,13 +1,3 @@
-<?php  
-	$id_cuestionario = $_GET['id_cuestionario'];
-	$array = consulta_array("SELECT * FROM cuestionarios WHERE id_cuestionario = '$id_cuestionario'");
-	$id_modulo = $array['id_modulo'];
-	$cuestionario = $array['cuestionario'];
-
-	$modulo = consulta_txt("SELECT modulo FROM modulos WHERE id_modulo = '$id_modulo'","modulo");
-	$link = "../".amigables($modulo)."/";
-?>
-
 <input type="hidden" class="modulo_return" value="<?php echo $modulo ?>">
 <input type="hidden" class="link_return" value="<?php echo $link ?>">
 <input type="hidden" class="titulo" value="<?php echo $cuestionario ?>">
