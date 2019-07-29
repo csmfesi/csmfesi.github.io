@@ -111,7 +111,7 @@
                                                     $consulta_modulos = mysqli_query($q_sec,"SELECT * FROM modulos order by id_modulo asc");
                                                     while ($array = mysqli_fetch_array($consulta_modulos)) {
                                                         $modulo = $array['modulo'];
-                                                        $direccion = amigables($modulo)."/";
+                                                        $direccion = amigables($modulo)."/$index_modulos";
                                                         ?>
                                                             <span>
                                                                 <a href="<?php echo $direccion ?>" style="color:white"><?php echo $modulo ?></a>

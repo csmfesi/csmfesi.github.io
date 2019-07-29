@@ -37,7 +37,7 @@
                             <div class="col-lg-12">
                                 <div class="au-card chart-percent-card">
                                     <div class="au-card-inner">
-                                        <h3 class="title-2 tm-b-5">Recomendaciones Bibliograficas</h3>
+                                        <h3 class="title-2 tm-b-5">Contacto</h3>
                                         
                                         <p style="margin-top: 15px;font-size: .9em">Zona en construcción</p>
                                         <div class="row no-gutters">

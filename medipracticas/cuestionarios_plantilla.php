@@ -48,7 +48,7 @@
                                                         $control_color = 0;
                                                         while  ($array  = mysqli_fetch_array($consulta)) {
                                                                 $modulo = $array['modulo'];
-                                                                $direccion = amigables($modulo)."/";
+                                                                $direccion = amigables($modulo)."/$index_modulos";
                                                                 if ($control_color == '0') {
                                                                     $color         =  "dot--blue";
                                                                     $control_color =  1;

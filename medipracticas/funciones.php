@@ -1,6 +1,7 @@
 <?php 
 	
-	$type_produccion = "local";
+	$type_produccion = "local"; 
+    $modo  = "prod";
 
 	if ($type_produccion == "local") {
 		$ruta = "http://localhost/seg/";
@@ -21,8 +22,21 @@
 		$bd_s          = "";
 	}
 
-	$nombre_empresa = "";
-	$password_s = "1234";
+	if ($modo == 'compu') {
+		$index           = 'index_plantilla.php';
+		$cuestionarios   = 'cuestionarios_plantilla.php';
+		$casos           = 'casos_plantilla.php';
+		$recomendaciones = 'recomendaciones_plantilla.php';
+		$contacto        = 'contacto_plantilla.php';
+		$index_modulos   = 'index_plantilla.php';
+	}
+	if ($modo == 'prod') {
+		$index           = 'index.html';
+		$cuestionarios   = 'cuestionarios.html';
+		$casos           = 'casos.html';
+		$recomendaciones = 'recomendaciones.html';
+		$contacto        = 'contacto.html';
+	}
 
 	global $q_sec;
 	$q_sec = mysqli_connect($servidor,$usuario_s,$password_bd,$bd_s);

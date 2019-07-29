@@ -1,6 +1,6 @@
 <?php $salto = "../" ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <?php include("../funciones.php"); ?>
@@ -67,6 +67,9 @@
         $(document).ready(function(){
             var reactivo = $(".reactivo").val()
             $(".numerito").html(reactivo+" - ") 
+            var titulo = $(".titulo").val()
+            $("title").html(titulo)
+            $(".titulo_h").html(titulo)
 
         })
 

@@ -1,5 +1,5 @@
     <div class="logo">
-        <a href="https://csmfesi.github.io/medipracticas/">
+        <a href="<?php  echo $salto.$index; ?>">
             <img src="<?php echo $salto; ?>images/icon/logo.png" alt="Cool Admin" />
         </a>
     </div>
@@ -9,24 +9,24 @@
                 
 
                 <li>
-                    <a class="js-arrow" href="">
+                    <a class="js-arrow" href="<?php  echo $salto.$index; ?>">
                         <i class="fas fa-tachometer-alt"></i>Indice
                     </a>                          
                 </li>
                 <li>
-                    <a href="">
+                    <a href="<?php  echo $salto.$cuestionarios; ?>">
                         <i class="fas fa-list"></i>Cuestionarios</a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="<?php  echo $salto.$casos; ?>">
                         <i class="fas fa-h-square"></i>Casos Clinicos</a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="<?php  echo $salto.$recomendaciones; ?>">
                         <i class="fas fa-book"></i>Recomendaciones</a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="<?php  echo $salto.$contacto; ?>">
                         <i class="fas fa-location-arrow"></i>Contacto</a>
                 </li><!--
                 <li class="active has-sub">

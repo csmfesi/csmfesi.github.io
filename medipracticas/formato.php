@@ -10,9 +10,11 @@
 
 <input type="hidden" class="modulo_return" value="<?php echo $modulo ?>">
 <input type="hidden" class="link_return" value="<?php echo $link ?>">
+<input type="hidden" class="titulo" value="<?php echo $cuestionario ?>">
 
 
 <div class="col-md-12">
+	<h1 class="titulo_h" style="display:none";></h1>
     <div class="card">
         <div class="card-header">
             <i class="mr-2 fa fa-align-justify"></i>

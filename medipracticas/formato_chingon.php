@@ -1,4 +1,4 @@
-<?php $salto = "../" ?>
+<?php $salto = "../"; ?>
 <!DOCTYPE html>
 <html lang="en">
 
