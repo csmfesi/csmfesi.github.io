@@ -14,7 +14,7 @@
 
 
 <div class="col-md-12">
-	<h1 class="titulo_h" style="display:none";></h1>
+	
     <div class="card">
         <div class="card-header">
             <i class="mr-2 fa fa-align-justify"></i>
@@ -22,6 +22,7 @@
                 <span class="num_reactivos"></span>-R |     
                 <?php echo $cuestionario ?>  - <?php echo $modulo ?>
             </strong>
+            <h1 class="titulo_h" style="display:none";><?php echo $cuestionario ?></h1>
         </div>
 
         <div class="card-body">
