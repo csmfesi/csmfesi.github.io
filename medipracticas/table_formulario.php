@@ -9,7 +9,7 @@
                 <th>D</th>
                 <th>E</th>
                 <th>Correcto</th>
-                <th>Orden</th>
+                <th>tache</th>
             </tr>
         </thead>
         <tbody class="trs">

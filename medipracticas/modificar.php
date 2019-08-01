@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,6 +9,9 @@
     <style>
         .input_td{
             background-color:#f2f2f2;
+        }
+        .pa_borrar{
+        	background-color:#E6B0AA;
         }
     </style>
 </head>
@@ -41,9 +45,9 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="au-card chart-percent-card"> 
-                                    <h3 class="title-2 tm-b-5">Crear un cuestionario</h3><br>
+                                    <h3 class="title-2 tm-b-5">Modificar cuestionario</h3><br>
                                     <div class="row no-gutters">
-                                        <?php include("formulario_registrar_cuestionario.php"); ?>
+                                        <?php include("formulario_modificar.php"); ?>
                                         <div class="col-md-12 mensaje"></div>   
                                     </div>
                                     <br>
@@ -61,6 +65,28 @@
         <input type="hidden" class="control_td" value="0">
     </div>
         <script>
+		$(document).on('change','.modulo_select',function(){
+		    var id_modulo = $(this).val()
+		    $.ajax({
+		        type:"GET",
+		        url:"select_cuestionarios.php?id_modulo="+id_modulo,
+		        success:function(data){
+		        	$(".cuestionario_select").html(data)
+		        }
+		    });
+		})
+
+		$(document).on('change','.cuestionario_select',function(){
+			var clase = $(this).val()
+			var nombresillo = $(".cuestionario_select ."+clase+"").html()
+			$(".nombresillo").val(nombresillo)
+		})
+		
+
+
+
+
+
         $(document).on('dblclick','td',function(){
             var td = $(this).html()
             var control_td = $(".control_td").val()
@@ -76,7 +102,15 @@
         })
 
         $(document).on('click','.tachesito',function(){ 
-            $(this).parent().parent().remove()
+            $(this).parent().parent().attr("data","borrar")
+            $(this).parent().parent().addClass("pa_borrar")
+            $(this).parent().append(" <i class='fa fa-check-circle-o se_queda'></i>")
+        })
+
+        $(document).on('click','.se_queda',function(){ 
+            $(this).parent().parent().attr("data","normal")
+            $(this).parent().parent().removeClass("pa_borrar")
+            $(this).remove()
         })
         
         
@@ -85,7 +119,21 @@
             e.preventDefault()
             $(".form_registro_cuestionario").hide()
             $(".form_registro_campos").show()
+
+            //$(".btn_subir_subapartado").prop( "disabled",true)
+			$.ajax({
+			    type:"POST",
+		        url:"table_formulario_modificar.php",
+		        data:$(".form_datos_cuestionario").serialize(),
+		        success:function(data){
+		        	$(".trs").html(data)       
+		        }
+			});
+
         })
+
+
+
         $(document).on('click','.btn_regresar',function(e){
             e.preventDefault()
             $(".form_registro_campos").hide()
@@ -101,7 +149,7 @@
             var opcion_e = $(".opcion_e").val() 
             var correcto = $('input:radio[name=correcto]:checked').val();
 
-            $(".trs").append("<tr><td>M</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>")
+            $(".trs").append("<tr data='new' style='background-color:#ABEBC6'><td>M</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>")
             $(".trs tr:last td:eq(0)").html(pregunta)
             $(".trs tr:last td:eq(1)").html(opcion_a)
             $(".trs tr:last td:eq(2)").html(opcion_b)
@@ -118,21 +166,23 @@
             $(".s").val('')
         })
 
-        $(document).on('click','.registrar_cuestionario',function(e){
+        $(document).on('click','.guardar_cambios',function(e){
             e.preventDefault()
             var arreglo = []
             
             var bob = []
-            var nombre_cuestionario = $(".nombre_cuestionario").val()
-            var id_modulo           = $(".id_modulo").val()
+            var nombre_cuestionario = $(".nombresillo").val()
+            var id_cuestionario     = $(".cuestionario_select").val()
             bob[0] = nombre_cuestionario;
-            bob[1] = id_modulo;
+            bob[1] = id_cuestionario;
             arreglo.push(bob)
 
             var caja    = []
             $(".trs tr").each(function(){
+            	
                 item = {};
-                
+                var tipo = $(this).attr("data")
+                id_pregunta = $(this).find("td:eq(0)").attr("data");
                 pregunta = $(this).find("td:eq(0)").html()
                 opcion_a = $(this).find("td:eq(1)").html()
                 opcion_b = $(this).find("td:eq(2)").html()
@@ -141,6 +191,8 @@
                 opcion_e = $(this).find("td:eq(5)").html()
                 correcto = $(this).find("td:eq(6)").html()
 
+                item ["tipo"]		 = tipo;
+                item ["id_pregunta"] = id_pregunta;
                 item ["pregunta"] = pregunta;
                 item ["opcion_a"] = opcion_a;
                 item ["opcion_b"] = opcion_b;
@@ -163,7 +215,7 @@
             $.ajax({
                 data: info,
                 type: 'POST',
-                url : 'process_cuestionario.php',
+                url : 'process_modificar_cuestionario.php',
                 processData: false, 
                 contentType: false,
                 success: function(data){
