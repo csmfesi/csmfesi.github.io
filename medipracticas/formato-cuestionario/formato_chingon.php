@@ -1,6 +1,6 @@
 <?php $salto = "../" ?>
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <?php include("../funciones.php"); ?>
 <?php  
     $id_cuestionario = $_GET['id_cuestionario'];

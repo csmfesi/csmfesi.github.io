@@ -1,6 +1,6 @@
-<?php $salto = "../"; $titulo = 'Cuestionarios Sistema Digestivo'; $modulo = 'Sistema Digestivo'?>
+<?php $salto = "../"; $titulo = 'Cuestionarios Sistema Reproductor'; $modulo = 'Sistema Reproductor'?>
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <?php include("../funciones.php"); ?>
@@ -37,14 +37,14 @@
                             <div class="col-lg-12">
                                 <div class="au-card chart-percent-card">
                                     <div class="au-card-inner">
-                                        <h3 class="title-2 tm-b-5">Cuestionarios - Sistema Digestivo</h3>
+                                        <h3 class="title-2 tm-b-5">Cuestionarios - Sistema Reproductor</h3>
                                         
                                         <p style="margin-top: 15px;font-size: .9em">Materiales disponibles</p>
                                         <div class="row no-gutters">
                                             <div class="col-xl-6">
                                                 <div class="chart-note-wrap">
                                                     <?php 
-                                                        $consulta = mysqli_query($q_sec,"SELECT * FROM cuestionarios WHERE id_modulo='9' order by id_cuestionario asc");
+                                                        $consulta = mysqli_query($q_sec,"SELECT * FROM cuestionarios WHERE id_modulo='7' order by id_cuestionario asc");
                                                         $control_color = 0;
                                                         while  ($array  = mysqli_fetch_array($consulta)) {
                                                                 $cuestionario = $array['cuestionario'];

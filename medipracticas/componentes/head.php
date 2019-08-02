@@ -1,9 +1,23 @@
     <!-- Required meta tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="au theme template">
-    <meta name="author" content="Hau Nguyen">
-    <meta name="keywords" content="au theme template">
+    <meta name="description" content="<?php 
+            if ($titulo != '' ) {
+                echo "$titulo";
+            } 
+            else{
+                echo "Medipracticas";
+            }
+        ?>">
+    <meta name="author" content="csmfesi">
+    <meta name="keywords" content="<?php 
+            if ($modulo != '' ) {
+                echo "$modulo";
+            } 
+            else{
+                echo "Medipracticas";
+            }
+        ?>  ">
 
     <!-- Title Page-->
     <title>

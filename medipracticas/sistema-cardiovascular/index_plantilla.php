@@ -1,6 +1,6 @@
-<?php $salto = "../"; $titulo = 'Cuestionarios Sistema Digestivo'; $modulo = 'Sistema Digestivo'?>
+<?php $salto = "../"; $titulo = 'Cuestionarios Sistema Cardiovascular'; $modulo = 'Sistema Cardiovascular'?>
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <?php include("../funciones.php"); ?>
@@ -44,7 +44,7 @@
                                             <div class="col-xl-6">
                                                 <div class="chart-note-wrap">
                                                     <?php 
-                                                        $consulta = mysqli_query($q_sec,"SELECT * FROM cuestionarios WHERE id_modulo='9' order by id_cuestionario asc");
+                                                        $consulta = mysqli_query($q_sec,"SELECT * FROM cuestionarios WHERE id_modulo='5' order by id_cuestionario asc");
                                                         $control_color = 0;
                                                         while  ($array  = mysqli_fetch_array($consulta)) {
                                                                 $cuestionario = $array['cuestionario'];
