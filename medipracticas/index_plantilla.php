@@ -34,16 +34,7 @@
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-md-12">
-                                <div class="card">
-                                    <img class="card-img-top" src="img/portad.jpg" alt="Card image cap">
-                                    <div class="card-body">
-                                        <h4 class="card-title mb-3">Medipracticas</h4>
-                                        <!--<p class="card-text">Un proyecto que nace con la finalidad de crear un espacio en linea para la preparacion en nuestros estudios de los primeros años como futuros medicos-->
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                           
                             <!--Comienza entradas-->
                             <div class="col-lg-6">
                                 <div class="au-card au-card--no-shadow au-card--no-pad m-b-40">
@@ -131,7 +122,7 @@
                                         <div class="overview-box clearfix">
                                             <div class="text">
                                                 <h2>Siguenos en Redes Sociales</h2>
-                                                <span><a href="https://www.facebook.com/Comité-Social-Medicina-FESI-592118774549805/" target="_blank" style="color: white"><i class="fa fa-facebook-square"></i> CSM FESI</a></span><br><br>
+                                                <span><a href="https://www.facebook.com/Team-Medicina-FESI-592118774549805/" target="_blank" style="color: white"><i class="fa fa-facebook-square"></i> TEAM MEDICINA</a></span><br><br>
                                             </div>
                                         </div>
                                         
